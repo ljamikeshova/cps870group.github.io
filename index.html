@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Information Page</title>
+    <link rel="stylesheet" href="C:\Users\rusla\CPS870\cps870group.github.io\style.css">
+</head>
+<body>
+    <header>
+        <h1>COVID-19 FAQ</h1>
+    </header>
+    <main>
+        <section id="covid-faq">
+            <!-- Question 1 -->
+            <article class="faq-item">
+                <h2>From which country did COVID-19 originate?</h2>
+                <p>COVID-19 was first identified in the city of Wuhan, Hubei province, China, in December 2019.</p>
+            </article>
+            <!-- Question 2 -->
+            <article class="faq-item">
+                <h2>What does 'COVID-19' stand for?</h2>
+                <p>'COVID-19' stands for 'Coronavirus Disease 2019,' referring to the year when the disease was first identified.</p>
+            </article>
+            <!-- Question 3 -->
+            <article class="faq-item">
+                <h2>What are the common symptoms of COVID-19?</h2>
+                <p>Common symptoms include fever, cough, fatigue, loss of taste or smell, and difficulty breathing among others.</p>
+            </article>
+            <!-- Question 4 -->
+            <article class="faq-item">
+                <h2>How can COVID-19 be prevented?</h2>
+                <p>Preventive measures include wearing masks, practicing hand hygiene, maintaining social distance, and getting vaccinated.</p>
+            </article>
+            <!-- Question 5 -->
+            <article class="faq-item">
+                <h2>Can COVID-19 be transmitted from people who are asymptomatic?</h2>
+                <p>Yes, individuals who do not show symptoms (asymptomatic) can still transmit the virus to others.</p>
+            </article>
+        </section>
+        <section id="user-question">
+            <input type="text" id="user-question-input" placeholder="Ask a question...">
+            <button onclick="provideAnswer()">Get Answer</button>
+            <p id="answer"></p>
+        </section>
+        <script>
+            function provideAnswer() {
+                const questionInput = document.getElementById('user-question-input');
+                const answerDisplay = document.getElementById('answer');
+                // This is where you'd handle the logic to determine the answer
+                answerDisplay.textContent = "Fetching answer...";
+                setTimeout(() => {
+                    answerDisplay.textContent = "This is a mock answer to your question.";
+                }, 3000); // Mocking a 3-second delay
+            }
+        </script>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 COVID-19 Information Page</p>
+    </footer>
+</body>
+</html>
+
